@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Collections.Generic;
 
 namespace hiragana
@@ -17,6 +18,7 @@ namespace hiragana
 
 		};
 
+		//Function for shuffling the list
 		public static List<string> RandomizeList(List<string> _list) {
 			var rnd = new Random();
 			var randomized = _list.OrderBy(item => rnd.Next());
@@ -31,28 +33,61 @@ namespace hiragana
 
 			while (true)
 			{
+				List<string> words_for_repeat = new List<string>();
+
 				Console.Clear();
 				var b = RandomizeList(sp_words_hiragana);
 
 				for (int i = 0; i < lenght; i++)
 				{
+					var _i = b.ElementAt(i);
+
 					Console.Clear();
+					Console.WriteLine(Rounds(roud));
+					Console.Write(_i);
 
-					if (roud <= 1){
-						Console.WriteLine($"{strRoud}{roud} раз");
-					}
-					else if (roud <= 4){
-						Console.WriteLine($"{strRoud}{roud} рази");
-					}
-					else if (roud > 4){
-						Console.WriteLine($"{strRoud}{roud} разiв");
-					}
+					System.Console.WriteLine("\n\n\nНатисьнiсть на 'C' якщо не знаєте | Якщо знаєте то на будь яку кнопку крiм 'C'.");
+					var input = Console.ReadKey();
 
-					Console.Write(b.ElementAt(i));
-					Console.ReadKey();
+					switch (input.Key){
+						case ConsoleKey.C:
+							words_for_repeat.Add(_i);
+							break;
+					}
 				}
 
+				Console.Clear();
+				WordsRepeat(words_for_repeat);
+
+				Console.ReadKey();
 				roud++;
+			}
+
+			//Function for output 'words_for_repeat'
+			void WordsRepeat(List<string> _list){
+				Console.Write("Повторiть написанння цих слiв: ");
+
+				foreach(var item in _list){
+					Console.Write($"{item}, ");
+				}
+
+				Thread.Sleep(20000);
+			}
+
+			//Function for output 'roud'
+			string Rounds(int round){
+				string i;
+
+				if (roud <= 1){
+					i = $"{strRoud}{roud} раз";
+				}
+				else if (roud <= 4){
+					i = $"{strRoud}{roud} рази";
+				}
+				else{i = $"{strRoud}{roud} разiв";}
+
+				return i.ToString();
+			
 			}
 		}
 

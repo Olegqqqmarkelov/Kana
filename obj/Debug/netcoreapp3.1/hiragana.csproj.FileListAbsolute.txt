@@ -1,0 +1,13 @@
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.exe
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.deps.json
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.runtimeconfig.json
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.runtimeconfig.dev.json
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.dll
+C:\Users\Lenovo\Desktop\Kana\bin\Debug\netcoreapp3.1\hiragana.pdb
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.dll
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.pdb
+C:\Users\Lenovo\Desktop\Kana\obj\Debug\netcoreapp3.1\hiragana.genruntimeconfig.cache
