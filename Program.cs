@@ -28,7 +28,6 @@ namespace hiragana
 		public static void Main(string[] args)
 		{
 			int lenght = sp_words_hiragana.Count;
-			string strRoud = "Пройдено по всiм буквам: ";
 			int roud = 0;
 
 			while (true)
@@ -43,7 +42,7 @@ namespace hiragana
 					var _i = b.ElementAt(i);
 
 					Console.Clear();
-					Console.WriteLine(Rounds(roud));
+					Console.WriteLine(Rounds(roud, "main"));
 					Console.Write(_i);
 
 					System.Console.WriteLine("\n\n\nНатисьнiсть на 'C' якщо не знаєте | Якщо знаєте то на будь яку кнопку крiм 'C'.");
@@ -56,11 +55,49 @@ namespace hiragana
 					}
 				}
 
-				Console.Clear();
-				WordsRepeat(words_for_repeat);
+				IfRepeat(words_for_repeat);
 
-				Console.ReadKey();
 				roud++;
+			}
+
+			//Checks which function of repeat to run
+			void IfRepeat(List<string> words_for_repeat){ 
+				Console.Clear();
+				if (words_for_repeat.Count >= 4)
+				{
+					RepeatofWords(words_for_repeat);
+				}else if (words_for_repeat.Count >= 1)
+				{
+					WordsRepeat(words_for_repeat);
+				}
+				else {
+					System.Console.WriteLine("Ви знаєте всi букви!!!");
+					Thread.Sleep(5000);
+				}
+			}
+
+			//Function for repeat of words
+			void RepeatofWords(List<string> _words){
+				int lenght = _words.Count;
+				int roud = 0;
+
+				Console.WriteLine("Повторення свiх букв яких ви не знаєте.");
+				Thread.Sleep(5000);
+
+				while (roud != 4)
+				{
+					var words = RandomizeList(_words);
+
+					for (int b = 0; b < lenght; b++)
+					{
+						Console.Clear();
+						Console.WriteLine(Rounds(roud, "repeat") + "\n\n" + words.ElementAt(b));
+						Console.ReadLine();
+					}
+					roud++;
+				}
+					
+
 			}
 
 			//Function for output 'words_for_repeat'
@@ -71,20 +108,41 @@ namespace hiragana
 					Console.Write($"{item}, ");
 				}
 
-				Thread.Sleep(20000);
+				Thread.Sleep(5000);
+
+				Console.WriteLine("\n\nДля продовження нажнмiть Enter!");
+				Console.ReadLine();
 			}
 
 			//Function for output 'roud'
-			string Rounds(int round){
+			string Rounds(int round, string main){
 				string i;
+				string strRoud = "Пройдено по всiм буквам: ";
+				string repeat = "Повторено по всiм буквам: ";
 
-				if (roud <= 1){
-					i = $"{strRoud}{roud} раз";
+				i = "";
+				if (main == "main")
+				{
+					if (roud <= 1)
+					{
+						i = $"{strRoud}{roud} раз";
+					}
+					else if (roud <= 4)
+					{
+						i = $"{strRoud}{roud} рази";
+					}
+					else { i = $"{strRoud}{roud} разiв"; }
 				}
-				else if (roud <= 4){
-					i = $"{strRoud}{roud} рази";
+				else if (main == "repeat"){
+					if (round <= 1)
+					{
+						i = $"{repeat}{round} раз";
+					}
+					else if (round <= 4)
+					{
+						i = $"{repeat}{round} рази";
+					}else { i = $"{repeat}{round} разiв"; }
 				}
-				else{i = $"{strRoud}{roud} разiв";}
 
 				return i.ToString();
 			
