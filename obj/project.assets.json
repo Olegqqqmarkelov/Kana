@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Kana\\hiragana.csproj",
-      "projectName": "hiragana",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Kana\\hiragana.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Kana\\Kana.csproj",
+      "projectName": "Kana",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Kana\\Kana.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Lenovo\\Desktop\\Kana\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,6 +58,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"

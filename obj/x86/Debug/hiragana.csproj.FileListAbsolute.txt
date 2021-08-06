@@ -1,8 +1,0 @@
-C:\Users\Lenovo\Desktop\hiragana\hiragana\bin\Debug\hiragana.exe
-C:\Users\Lenovo\Desktop\hiragana\hiragana\bin\Debug\hiragana.pdb
-C:\Users\Lenovo\Desktop\hiragana\hiragana\obj\x86\Debug\hiragana.exe
-C:\Users\Lenovo\Desktop\hiragana\hiragana\obj\x86\Debug\hiragana.pdb
-C:\Users\Lenovo\Desktop\Kana\obj\x86\Debug\hiragana.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\Kana\obj\x86\Debug\hiragana.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\Desktop\Kana\obj\x86\Debug\hiragana.exe
-C:\Users\Lenovo\Desktop\Kana\obj\x86\Debug\hiragana.pdb
