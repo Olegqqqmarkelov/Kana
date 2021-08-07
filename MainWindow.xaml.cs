@@ -79,8 +79,13 @@ namespace Kana
         }
         private void ButtonWrite(object sender, RoutedEventArgs e)
         {
-        	b = RandomizeList(sp_words);
-        	TextLabel.Text=b[0];
+        	foreach (var i in sp_words_hiragana) 
+        	{
+        		if (TextLabel.Text == i.Key){
+        			TextLabel.Text += i.Value;
+        			break;
+        		}
+        	}
             //MessageBox.Show("Write");
         }
         private void ButtonDontWrite(object sender, RoutedEventArgs e)
